@@ -12,4 +12,11 @@ Diffusion Models are probabilistic models designed to learn a data distribution 
 Images(x) are going through the diffusion process to add noise sequentially, Then the U-net architecture is used to denoise the image step by step. **Latent Diffusion Models (LDMs)** consist of an encoder and decoder to not feed the input image directly to diffusion process. Using autoencoder to first encode images to latent space and then going through diffusion process in laten spaces. These low resolution images can be decoded to get back to the predicted image.
 
 
-Reference: https://arxiv.org/abs/2112.10752
+**Contrastive Language-Image Pre-Training (CLIP)** is a neural network trained on a large set (400M) of image and text pairs. As a consequence of this multi-modality training, CLIP can be used to find the text snippet that best represents a given image, or the most suitable image given a text query.
+
+
+
+***Reference:***
+https://arxiv.org/abs/2112.10752
+https://towardsdatascience.com/linking-images-and-text-with-openai-clip-abb4bdf5dbd2
+
