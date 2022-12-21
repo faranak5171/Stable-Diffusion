@@ -17,9 +17,12 @@ Images(x) are going through the diffusion process to add noise sequentially, The
 The following steps are used in application of LDMs:
   1. Load the autoencoder model which will be used to decode the latents into image space.
      **diffusers.AutoencoderKL.from_pretrained()**
-  2. Load the tokenizer and text encoder to tokenize and encode the text. Tokenizer is a common task in NLP, seperating a piece of text into small unit called      tokens.Byte Pair Encoding (BPE) is a widely used tokenization method among transformer-based models.
+  2. Load the tokenizer and text encoder to tokenize and encode the text. Tokenizer is a common task in NLP, seperating a piece of text into small unit called tokens.Byte Pair Encoding (BPE) is a widely used tokenization method among transformer-based models.
      **transforms.CLIPTokenizer.from_pretrained**
-
+  3. The Unet model for generating the latents.
+    **diffusers.UNet2DConditionModel.from_pretrained**
+  4. The noise scheduler
+    **diffusers.schedulers.scheduling_ddim.LMSDiscreteScheduler**
 
 ***Reference:***
 https://arxiv.org/abs/2112.10752
